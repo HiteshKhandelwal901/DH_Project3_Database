@@ -1,0 +1,101 @@
+# Digital Humanities Project 3 : Representation of Violence
+
+## Names and group leader
+
+Hitesh Khandelwal (Leader)
+
+Mansi Aggarwal
+
+Harieshwar 
+
+## Section 1: Introduction 
+
+The Partition of 1947 was perhaps the most tumultuous incident in the history of India and Pakistan, characterized by widespread and unfortunate violence between the various religious communities fleeing between the two countries, Muslims fleeing towards Pakistan, Hindus, Sikhs and other religions fleeing to India.
+Our current knowledge of the events comes primarily through the records of witnesses as well as the literature that was created surrounding the event. We need to assume that all of that information is truthful and unbiased. However, is there any possibility that there is some re-telling of the events in the literature that might be biased in some way or another. For example, depiction of the actions of individuals of one religion to another. Our question is if this can be deduced from the texts.
+
+
+
+
+## Section 2: Research Question 
+
+How has the author portrayed violence in relation to religion?
+
+
+
+
+## Section 3: Data
+
+We had access to a database of the data contained in the two texts ‘Savage Harvest’ written by Mohinder Sarna Singh and ‘Mottled Dawn’ by Saadat Hasan Manto, both of which are collections of short stories of the experiences of Indians and Pakistanis during and after the Partition. The database’s fields had information regarding the titles of the short stories, the characters in them, and various discernible events in those stories. If we are to assume that the accounts are perhaps biased in some way, then the data will show some amount of differentiation.
+The fields most important for our research were the fields containing the data on the religion of characters, how they died- if they did- and whether a certain character was entered in as a ‘single’, as in they are just one person, or if they were entered in as a mob.
+
+
+
+
+## Section 4: Operationalize into Queries 
+
+1.  
+Use the characters at events where there is death to see if people from different  religions suffer  disproportionately as a result of mob violence.
+
+2.
+Use the characters to see if there is a religious group more likely to be a mob engaging in violence. 
+
+
+
+
+## Section 5: CrossTabs 
+
+1.
+The first table we generate is for characters at events. We obtain a table of all the characters that died during a particular event, arranged by their religion and cause of death. Out of the 60 deaths that occur, more than 50% i.e. 31 deaths are a result of mob violence. The second highest number, 20% deaths, is attributed to ‘Killed- (non-military)’. This clearly depicts a disproportionately higher incidence of unnatural deaths, highly characteristic of partition narratives
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/wW06mcL/table1.png" alt="table1" border="0"></a>
+
+2.
+The second table we generate is for characters. We are interested in sorting them by religion and number to determine which religion is more likely to coincide with mobs. Out of the 1361 characters in our database, 26 of them are mobs, which forms a small percentage - 2%. It is also interesting to note that there is almost double the number of characters that are Muslim than there is Sikh, or even Hindu for that matter. 
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/CmD6Gm9/table2.png" alt="table2" border="0"></a>
+
+
+
+
+## Section 6: Analysis
+
+From our first table, that captures events involving religion and cause of death, we find that of the 31 occurrences of deaths as a result of mob violence, 10 of the people killed are Muslims, 5 are Hindu and 6 are Sikh. Intuitively, this is contrary to our expectation, considering authors that identify as Sikh might be unconsciously or consciously biased in their portrayal of violence, with an inclination to portray people of their religion as victims suffering as a result of violence perpetrated by the opposing camp. For instance, in the story of ‘Jathedar Mukand Singh’, Mr Singh in the quest of revenge gathers his fellow Sikh men to carry out killings of Muslim men. In this particular story, authors have indeed associated Sikh with violent mobs and Muslims as both victims and perpetrators of violence. Another instance of this can be seen in the story of ‘Parmeshwari’, where the mob of Sikhs and Hindus avenge their revenge by killing Muslim men in India. 
+
+From our second table, that captures characters by religion and number, we find that of the 26 mobs, 10 are Muslim, 0 are Hindu and 2 are SIkh, which reveals a tendancy to disproportionately represent Muslims as perpetrators of violence. 
+
+A combined analysis of the 2 findings reveals something interesting. While there is a tendency to portray violent mobs as Muslim, it is not the case that those at the recieving end of mob violence form a binary. While we might have expected Sikhs to be depicted as victims of such violence, it is in fact Muslims that tend to be the religious group most susceptible to death due to mob violence. This may be revealing of the fact that no matter what religion is said or thought to have caused more violence or destruction, the devastating consequences of such violence were not limited to just one group. Death, destruction, displacement and trauma were common to all, be it Muslims or Sikh, something that became evident to us with close reading of our texts as well. Having said that, these numbers still need to be interpreted with caution, given the limited statistical power they afford. 
+
+
+
+
+## Section 7 : Data Visualisation
+
+1.
+We visualize the counts of individuals killed because of mob violence. This is achieved by getting the cross tabs with religion and cause of death variables. The pie chart shows the initially unexpected result of a Muslim majority. 
+
+<a href="https://ibb.co/p4HnN4F"><img src="https://i.ibb.co/P12tJ1H/PIE-CHART1.jpg" alt="PIE-CHART1" border="0"></a>
+
+2.
+We visualize the counts of religious groups involved in mob violence. This is achieved by getting the cross tabs with religion and mob violence variables. The bar graph reveals a much higher instance of mobs being Muslim than Sikh or Hindu.
+
+<a href="https://ibb.co/g6CLwwB"><img src="https://i.ibb.co/fQ7zttP/BAR-CHART1.jpg" alt="BAR-CHART1" border="0"></a>
+
+
+
+
+## Section 8: Reflection
+
+Throughout this course we seem to be tackling data manipulation and analysis with increasing quality. With Voyant we had simplistic but useful tools to find data trends over small corpuses. RStudio provided us with different kinds of tools and analysed the data differently over larger corpuses. A database software has a pretty similar processing power to that of RStudio while being relatively user-friendly like Voyant. While the data entry can be tiring, repetitive and time-consuming there are ways to automate the process. The tiresome process, however, does have an advantage. It allows for an extremely focused, deep and insightful reading of the text, which a close reading without the intention of entering data into a database might not provide. It’s easy to skim through parts that may be seemingly irrelevant, but this data exercise forces one to think through seemingly redundant parts of the text to find implicit events and themes. Once the data has been entered, however, the user has pretty good control on how the data can be manipulated and processed.
+
+However, the biggest drawback of a database became apparent in the process of creating it. It is limited by the data it is fed, both quantitatively and qualitatively. For this particular project, the amount of data we were working with was relatively small, understandably so, given the time and manpower that went into building the database. However, a small database is unable to afford enough statistical power to deduce robust trends or draw meaningful conclusions. Qualitatively, it is dependent on the interpretation of those feeding it into the database. There might be a lack of consistency in the data due to a large number of people working on it. Moreover, many fields are either not compulsory or cannot be filled, leading to a large number of unknowns, which tends to warp data analysis. Specific to our question, we were interested in finding which religion mobs are most likely to be affiliated to. The highest percentage is occupied by the field ‘unknown’ which might overestimate or underestimate the result depending on the actual affiliation of those mobs. It’s easy to get lost in these questions of bias, but is bias even a concern when it’s all fiction anyway?
+
+
+## Section 0:
+
+Harieshwar Vetri: n=43
+Hitesh Khandelwal: n=67
+Mansi Agarwal: n=93
+
+
+
+
